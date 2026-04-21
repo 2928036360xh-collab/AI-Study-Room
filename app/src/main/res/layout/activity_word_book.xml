@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_page"
+    android:orientation="vertical">
+
+    <!-- 顶部栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/ocr_accent"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/btn_wordbook_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="返回"
+            android:padding="4dp"
+            android:rotation="180"
+            android:src="@drawable/ic_play"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:text="@string/ocr_word_book"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_word_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 个"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- 搜索栏 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/bg_card">
+
+        <EditText
+            android:id="@+id/et_search_word"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@android:color/transparent"
+            android:hint="搜索生词..."
+            android:inputType="text"
+            android:paddingHorizontal="16dp"
+            android:textSize="14sp" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- 空状态 -->
+    <TextView
+        android:id="@+id/tv_wordbook_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="生词本为空\n识别文字后可添加生词"
+        android:textColor="@color/text_hint"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <!-- 生词列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_words"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="12dp" />
+</LinearLayout>

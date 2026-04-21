@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_page"
+    android:orientation="vertical">
+
+    <!-- 顶部工具栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_gradient_header"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/btn_ocr_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="返回"
+            android:padding="4dp"
+            android:src="@drawable/ic_play"
+            android:rotation="180"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:text="@string/ocr_result_title"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btn_copy_text"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="复制"
+            android:padding="4dp"
+            android:src="@drawable/ic_copy"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+    <!-- 图片预览 -->
+    <ImageView
+        android:id="@+id/iv_ocr_preview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/black"
+        android:scaleType="centerInside"
+        android:contentDescription="OCR 预览图" />
+
+    <!-- 加载指示 -->
+    <ProgressBar
+        android:id="@+id/progress_ocr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:visibility="gone" />
+
+    <!-- 识别结果 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_ocr_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="识别结果将在此显示..."
+            android:lineSpacingMultiplier="1.5"
+            android:textColor="@color/text_primary"
+            android:textIsSelectable="true"
+            android:textSize="16sp" />
+    </ScrollView>
+
+    <!-- 底部操作栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_card"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_to_wordbook"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:text="@string/ocr_add_word"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_star"
+            app:iconGravity="textStart" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_goto_wordbook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="@string/ocr_word_book"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/ic_book"
+            app:iconGravity="textStart" />
+    </LinearLayout>
+</LinearLayout>

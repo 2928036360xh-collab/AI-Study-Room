@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 浅色模式底部导航：白色 + 顶部主色分隔线 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/nav_bg" />
+            <corners android:topLeftRadius="24dp" android:topRightRadius="24dp" />
+        </shape>
+    </item>
+    <item android:top="0dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="0"
+                android:startColor="#000099C4"
+                android:centerColor="#660099C4"
+                android:endColor="#000099C4"
+                android:type="linear" />
+            <size android:height="1dp" />
+        </shape>
+    </item>
+</layer-list>

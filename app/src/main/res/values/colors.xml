@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 浅色模式颜色 (default) -->
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- 主题色 -->
+    <color name="primary">#0099C4</color>
+    <color name="primary_dark">#007BA0</color>
+    <color name="primary_light">#33C6E8</color>
+    <color name="accent">#CC8800</color>
+
+    <!-- 功能色（浅色下要加深，保证可见性） -->
+    <color name="score_good">#00966A</color>
+    <color name="score_warning">#CC8800</color>
+    <color name="score_danger">#CC1A40</color>
+
+    <!-- 背景色 -->
+    <color name="bg_page">#EDF3FF</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="bg_surface">#F4F8FF</color>
+    <color name="card_border">#D0E0F0</color>
+
+    <!-- 文字色 -->
+    <color name="text_primary">#0F1E2E</color>
+    <color name="text_secondary">#5A7491</color>
+    <color name="text_hint">#99B0C8</color>
+
+    <!-- 各页面主题色 -->
+    <color name="home_accent">#0099C4</color>
+    <color name="home_accent_dark">#006E8A</color>
+    <color name="home_accent_light">#66D3F0</color>
+    <color name="home_icon_bg">#D0EEFA</color>
+
+    <color name="ocr_accent">#00966A</color>
+    <color name="ocr_accent_dark">#006B4C</color>
+    <color name="ocr_accent_light">#66DAB8</color>
+    <color name="ocr_icon_bg">#CCF4E4</color>
+
+    <color name="history_accent">#CC8800</color>
+    <color name="history_accent_dark">#9A6600</color>
+    <color name="history_accent_light">#F0C84A</color>
+    <color name="history_icon_bg">#FFF0C0</color>
+
+    <color name="settings_accent">#9020C0</color>
+    <color name="settings_accent_dark">#6C1090</color>
+    <color name="settings_accent_light">#CC88E8</color>
+    <color name="settings_icon_bg">#EDD0FA</color>
+
+    <!-- 底部导航栏 -->
+    <color name="nav_selected">#0099C4</color>
+    <color name="nav_unselected">#8BA8C0</color>
+    <color name="nav_bg">#FFFFFF</color>
+
+    <!-- 仪表盘控件专用 -->
+    <color name="gauge_track">#D8E8F4</color>
+    <color name="gauge_text">#0F1E2E</color>
+    <color name="gauge_label">#5A7491</color>
+    <color name="gauge_status_empty">#99B0C8</color>
+
+    <!-- 标题栏背景 -->
+    <color name="title_bg">#FFFFFF</color>
+    <color name="title_bg_ocr">#F5FFFA</color>
+    <color name="title_bg_history">#FFFBF0</color>
+    <color name="title_bg_settings">#FAF0FF</color>
+</resources>

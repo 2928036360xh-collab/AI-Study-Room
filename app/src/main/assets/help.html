@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用帮助 - AI 自习室</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, sans-serif; padding: 20px; color: #333; background: #f5f5f5; line-height: 1.8; }
+        h1 { color: #1565C0; font-size: 22px; margin-bottom: 20px; text-align: center; }
+        h2 { color: #1565C0; font-size: 17px; margin: 24px 0 12px; padding-left: 10px; border-left: 3px solid #1565C0; }
+        .card { background: white; border-radius: 12px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 4px rgba(0,0,0,0.08); }
+        p { margin-bottom: 8px; font-size: 15px; }
+        ul { padding-left: 24px; margin-bottom: 8px; }
+        li { margin-bottom: 6px; font-size: 14px; }
+        .tip { background: #E3F2FD; border-radius: 8px; padding: 12px; margin: 12px 0; font-size: 14px; }
+        .warn { background: #FFF3E0; border-radius: 8px; padding: 12px; margin: 12px 0; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <h1>📚 AI 自习室 使用帮助</h1>
+
+    <div class="card">
+        <h2>快速开始</h2>
+        <p>AI 自习室利用端侧 AI 模型，实时监测您的坐姿和专注状态，帮助您养成良好的学习习惯。</p>
+        <ul>
+            <li>点击首页「开始学习」按钮启动学习会话</li>
+            <li>将手机摄像头对准自己，保持上半身可见</li>
+            <li>AI 将实时分析您的坐姿和专注度</li>
+            <li>学习结束后查看详细报告</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>坐姿检测</h2>
+        <p>系统通过人体关键点检测分析您的坐姿：</p>
+        <ul>
+            <li><b>头部倾斜</b>：检测头部是否歪斜</li>
+            <li><b>肩部水平</b>：检测双肩是否平齐</li>
+            <li><b>躯干前倾</b>：检测是否过度弯腰</li>
+        </ul>
+        <div class="tip">💡 建议将手机放在正前方，与视线平齐，距离约 50-80cm</div>
+    </div>
+
+    <div class="card">
+        <h2>专注力检测</h2>
+        <p>系统通过面部检测判断您的专注状态：</p>
+        <ul>
+            <li><b>人物存在</b>：检测画面中是否有人</li>
+            <li><b>面部朝向</b>：检测是否面向屏幕</li>
+            <li><b>离开检测</b>：检测是否长时间离开座位</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>文字识别 (OCR)</h2>
+        <p>拍照或选取图片，AI 将自动识别其中的文字。</p>
+        <ul>
+            <li>支持拍照和从相册选择</li>
+            <li>识别结果可一键复制</li>
+            <li>选中文字可添加到生词本</li>
+            <li>生词本支持在线查询英文释义</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>常见问题</h2>
+        <p><b>Q: 为什么检测不准确？</b></p>
+        <p>A: 请确保光线充足、摄像头能看到上半身。可在设置中调节灵敏度。</p>
+        <p><b>Q: 如何关闭提醒音？</b></p>
+        <p>A: 在设置页面中关闭「提醒音效」开关。</p>
+        <div class="warn">⚠️ 本应用所有 AI 计算均在本地完成，不会上传任何图像数据。</div>
+    </div>
+
+    <div class="card" style="text-align:center; color:#999; font-size:13px;">
+        <p>AI 自习室 v1.0.0</p>
+        <p>基于 ML Kit 的端侧视觉分析能力</p>
+    </div>
+</body>
+</html>

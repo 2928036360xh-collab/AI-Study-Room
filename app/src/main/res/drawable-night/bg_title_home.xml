@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 首页标题块：磨砂玻璃 + 左侧电光青渐变 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#BB0A1A32" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    <item android:right="0dp" android:top="0dp" android:bottom="0dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="0"
+                android:startColor="#5500C8FF"
+                android:endColor="#0000C8FF"
+                android:type="linear" />
+            <corners android:topLeftRadius="16dp" android:bottomLeftRadius="16dp" />
+            <size android:width="4dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <stroke android:width="1dp" android:color="#1A00C8FF" />
+            <corners android:radius="16dp" />
+            <solid android:color="#00000000" />
+        </shape>
+    </item>
+</layer-list>

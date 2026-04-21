@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 权限声明 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <application
+        android:name=".EndSideApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Endside"
+        android:usesCleartextTraffic="true">
+
+        <!-- 主页 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 学习会话 (全屏沉浸) -->
+        <activity
+            android:name=".ui.study.StudySessionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Endside.Study" />
+
+        <!-- 学习报告 -->
+        <activity android:name=".ui.study.StudyReportActivity" />
+
+        <!-- OCR 结果 -->
+        <activity android:name=".ui.ocr.OcrResultActivity" />
+
+        <!-- 单词本 -->
+        <activity android:name=".ui.ocr.WordBookActivity" />
+
+        <!-- 学习详情 -->
+        <activity android:name=".ui.history.SessionDetailActivity" />
+
+        <!-- 坐姿指导 (VideoView) -->
+        <activity android:name=".ui.settings.PostureGuideActivity" />
+
+        <!-- 帮助页 (WebView) -->
+        <activity android:name=".ui.settings.HelpActivity" />
+
+        <!-- 前台服务: 学习计时 -->
+        <service
+            android:name=".service.StudyTimerService"
+            android:foregroundServiceType="specialUse"
+            android:exported="false" />
+
+        <!-- ContentProvider: 暴露学习数据 -->
+        <provider
+            android:name=".data.provider.StudyDataProvider"
+            android:authorities="com.example.end_side.provider"
+            android:exported="false" />
+
+        <!-- FileProvider: OCR 拍照路径 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.end_side.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

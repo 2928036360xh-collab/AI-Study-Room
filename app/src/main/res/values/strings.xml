@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">AI 自习室</string>
+
+    <!-- 底部导航 -->
+    <string name="nav_home">首页</string>
+    <string name="nav_ocr">文字识别</string>
+    <string name="nav_history">学习记录</string>
+    <string name="nav_settings">设置</string>
+
+    <!-- 首页 -->
+    <string name="home_title">AI 自习室</string>
+    <string name="home_subtitle">智能陪伴，高效学习</string>
+    <string name="home_start_study">开始学习</string>
+    <string name="home_today_duration">今日学习</string>
+    <string name="home_total_sessions">累计次数</string>
+    <string name="home_avg_posture">平均坐姿</string>
+    <string name="home_avg_focus">平均专注</string>
+
+    <!-- 学习会话 -->
+    <string name="study_session_title">学习中</string>
+    <string name="study_stop">结束学习</string>
+    <string name="study_posture_score">坐姿评分</string>
+    <string name="study_focus_score">专注力评分</string>
+    <string name="study_duration">学习时长</string>
+    <string name="alert_posture_bad">⚠️ 请注意坐姿！</string>
+    <string name="alert_focus_lost">⚠️ 请保持专注！</string>
+
+    <!-- 学习报告 -->
+    <string name="report_title">学习报告</string>
+    <string name="report_duration">学习时长</string>
+    <string name="report_avg_posture">平均坐姿</string>
+    <string name="report_avg_focus">平均专注力</string>
+    <string name="report_alert_count">提醒次数</string>
+    <string name="report_trend_posture">坐姿趋势</string>
+    <string name="report_trend_focus">专注力趋势</string>
+    <string name="report_share">分享报告</string>
+    <string name="report_done">完成</string>
+
+    <!-- OCR -->
+    <string name="ocr_title">文字识别</string>
+    <string name="ocr_subtitle">拍照翻译，随学随查</string>
+    <string name="ocr_take_photo">拍照识别</string>
+    <string name="ocr_pick_image">相册选择</string>
+    <string name="ocr_result_title">识别结果</string>
+    <string name="ocr_copy">复制文字</string>
+    <string name="ocr_add_word">添加生词</string>
+    <string name="ocr_word_book">生词本</string>
+
+    <!-- 历史记录 -->
+    <string name="history_title">学习记录</string>
+    <string name="history_subtitle">回顾成长，持续进步</string>
+    <string name="history_empty">还没有学习记录\n开始第一次学习吧！</string>
+
+    <!-- 设置 -->
+    <string name="settings_title">设置</string>
+    <string name="settings_subtitle">个性定制，专属体验</string>
+    <string name="settings_posture_guide">坐姿指导视频</string>
+    <string name="settings_help">使用帮助</string>
+    <string name="settings_alert_sound">提醒音效</string>
+    <string name="settings_sensitivity">检测灵敏度</string>
+    <string name="settings_about">关于应用</string>
+    <string name="settings_version">版本 1.0.0</string>
+
+    <!-- 通用 -->
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="delete">删除</string>
+    <string name="loading">加载中…</string>
+    <string name="permission_camera_rationale">需要摄像头权限以进行坐姿和专注力检测</string>
+    <string name="permission_denied">权限被拒绝，部分功能无法使用</string>
+</resources>
